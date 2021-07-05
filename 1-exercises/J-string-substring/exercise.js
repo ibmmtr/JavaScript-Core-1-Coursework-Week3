@@ -6,7 +6,10 @@
 
 let statement = "I like programming and dogs";
 
-statement = statement.substring();
+console.log(statement.length);
+console.log(statement.indexOf("ing"));
+console.log(statement.charAt(17));
+statement = statement.substring(0, 18);
 
 console.log(statement);
 
