@@ -45,22 +45,33 @@ let nameRaw = [
 ];
 
 function tidyUpString(arr) {
-  for (i = 0; i <= arr.length; i++) {
+  for (i = 0; i < arr.length; i++) {
     let fNameRaw = nameRaw[i].trim().replace("/", "").toLowerCase();
     console.log(fNameRaw);
   }
 }
 
-console.log(tidyUpString(nameRaw)); //! Debug
+tidyUpString(nameRaw); //! Debug
 
 /*
 Write a function that:
 - Takes an array and an index as input.
 - Returns a new array containing the same elements, but without the element at the passed index.
 */
+var testArray1 = [0, 1, 2, 3, 4, 5];
 
-function remove() {}
-
+function remove(origArray, arrIndex) {
+  let i = arrIndex;
+  let cloneArray = origArray.slice();
+  cloneArray.splice(i, 1);
+  console.log(cloneArray.join(", "));
+}
+remove(testArray1, 3); //! Debug
+/*
+var cloneArray = origArray.slice();
+cloneArray.splice(i, 1);
+console.log(cloneArray.join(","));
+*/
 /*
 Write a function that:
 - Takes an array of numbers as input.
