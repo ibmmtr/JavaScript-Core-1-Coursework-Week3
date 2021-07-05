@@ -67,11 +67,7 @@ function remove(origArray, arrIndex) {
   console.log(cloneArray.join(", "));
 }
 remove(testArray1, 3); //! Debug
-/*
-var cloneArray = origArray.slice();
-cloneArray.splice(i, 1);
-console.log(cloneArray.join(","));
-*/
+
 /*
 Write a function that:
 - Takes an array of numbers as input.
@@ -79,8 +75,21 @@ Write a function that:
 - The numbers must be rounded to 2 decimal places.
 - Numbers greater 100 must be replaced with 100.
 */
+let testArray5 = [23.58447, 18.103, 187.2, 0.372];
+//console.log(testArray5[0].toFixed(2));
 
-function formatPercentage() {}
+function formatPercentage(newArr) {
+  for (let i = 0; i < newArr.length; i++) {
+    if (newArr[i] > 100) {
+      let maxValue = 100;
+      newArr[i] = maxValue;
+      console.log(newArr[i]);
+    } else if (newArr[i] < 100) {
+      console.log(newArr[i].toFixed(2));
+    }
+  }
+}
+formatPercentage(testArray5); //! DEBUG
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
