@@ -3,16 +3,24 @@ Write a function that:
 - Accepts an array as a parameter.
 - Returns a new array containing the first five elements of the passed array.
 */
-function first5() {
+function first5(array) {
+  let size = 5;
+  return (items = array.slice(0, size));
 }
-
+console.log(first5([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); //! Debug
 /*
 Write a function that:
 - Accepts an array as a parameter.
 - Returns a new array containing the same elements, except sorted.
 */
-function sortArray() {
+
+function sortArray(arr) {
+  valueResult = arr.sort();
+  return valueResult;
 }
+
+var animals = ["cat", "dog", "elephant", "bee", "ant"]; //! Debug
+console.log(sortArray(animals)); //! Debug
 
 /*
 NOTE: This exercise is the same as one you did last week - try to do it again using things you learnt this week.
@@ -24,8 +32,26 @@ Write a function that:
 - Removes any forward slashes (/) in the strings.
 - Makes the strings all lowercase.
 */
-function tidyUpString() {
+
+let nameRaw = [
+  "  /Daniel",
+  " /Sanyia",
+  "AnTHonY",
+  "irina",
+  " Gordon",
+  "ashleigh   ",
+  "   Alastair  ",
+  " anne marie  ",
+];
+
+function tidyUpString(arr) {
+  for (i = 0; i <= arr.length; i++) {
+    let fNameRaw = nameRaw[i].trim().replace("/", "").toLowerCase();
+    console.log(fNameRaw);
+  }
 }
+
+console.log(tidyUpString(nameRaw)); //! Debug
 
 /*
 Write a function that:
@@ -33,8 +59,7 @@ Write a function that:
 - Returns a new array containing the same elements, but without the element at the passed index.
 */
 
-function remove() {
-}
+function remove() {}
 
 /*
 Write a function that:
@@ -44,8 +69,7 @@ Write a function that:
 - Numbers greater 100 must be replaced with 100.
 */
 
-function formatPercentage() {
-}
+function formatPercentage() {}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
